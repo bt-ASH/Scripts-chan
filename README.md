@@ -18,6 +18,7 @@
 - Hardware auto-detection
 - Multiple desktop support (Hyprland, Niri, Plasma)
 - Unified beautiful shell style
+- Auto theme switching based on wallpaper (credit: shorinkiwata)
 
 ## 📁 Structure
 
@@ -81,6 +82,7 @@ Select a module from the interactive menu, or run individual modules directly:
 - Tested on Arch Linux only
 - Scripts content is in English (avoids TTY encoding issues)
 - Original scripts preserved at `/home/ash/archlinux/`
+- Auto theme switching feature inspired by shorinkiwata (Bilibili)
 
 ## 📄 License
 
