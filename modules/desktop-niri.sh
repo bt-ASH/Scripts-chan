@@ -97,7 +97,8 @@ aur_pkgs=(
     ttf-maplemono-nf-cn-unhinted meowsans-ttf
 
     # ── Apps ────────────────────────────────────────────
-    vmware-workstation firefox burpsuite
+    vmware-workstation firefox 
+    burpsuite nmap sqlmap gobuster dirsearch whatweb metasploit ffuf-bin nuclei-bin
 )
 
 # ── Flatpak packages ────────────────────────────────────

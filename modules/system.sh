@@ -26,4 +26,13 @@ else
     echo -e "${CRED}>> Failed to install system packages.${CDEF}"
     exit 1
 fi
+
+sudo mkdir -p /etc/systemd/system/docker.service.d
+if [ -f /etc/systemd/system/docker.service.d/proxy.conf ]; then
+    sudo cp /etc/systemd/system/docker.service.d/proxy.conf{,.bak}
+fi
+
+sudo install -m 644 configs/docker/proxy.conf /etc/systemd/system/docker.service.d/
+sudo systemctl daemon-reload 
+
 exit 0
