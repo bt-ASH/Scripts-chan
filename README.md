@@ -29,8 +29,7 @@ Scripts-chan/
 ├── hardware-configuration.sh # Hardware detection & driver install
 ├── home/
 │   ├── ash.sh                # User applications setup
-│   ├── rebootloader.sh       # Bootloader reinstall
-│   └── shorin-niri-setup.sh  # Niri full environment setup
+│   └── rebootloader.sh       # Bootloader reinstall
 └── modules/
     ├── bootloader.sh         # GRUB/UEFI bootloader config
     ├── desktop-hyprland.sh   # Hyprland desktop install
