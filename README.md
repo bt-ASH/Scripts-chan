@@ -49,7 +49,6 @@ Scripts-chan/
 | `desktop-niri.sh`           | Niri Wayland compositor               |
 | `desktop-plasma.sh`         | KDE Plasma desktop environment        |
 | `ash.sh`                    | User apps & dotfiles                  |
-| `shorin-niri-setup.sh`      | Full Niri environment (configs, apps) |
 | `rebootloader.sh`           | Bootloader reinstall helper           |
 
 ## 🛠️ Installation
