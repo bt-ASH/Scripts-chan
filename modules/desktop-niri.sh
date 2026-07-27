@@ -31,7 +31,7 @@ pacman_pkgs=(
     pavucontrol cava wireplumber
 
     # ── Window Manager ──────────────────────────────────
-    niri fuzzel mako
+    niri keyd fuzzel mako 
     swayidle hyprlock swaylock-effects
     xdg-desktop-portal xdg-desktop-portal-gnome xorg-xwayland
     awww hyprpicker
@@ -145,6 +145,7 @@ echo -e "${CGRN}>> Enabling services...${CDEF}"
 echo "  ───────────────────────────────────────────────────"
 sudo systemctl enable --now power-profiles-daemon.service
 systemctl --user enable --now pipewire pipewire-pulse wireplumber
+sudo systemctl enable keyd
 sudo systemctl enable --now docker
 sudo usermod -aG docker "$USER"
 sudo systemctl enable --now vmware-networks.service
