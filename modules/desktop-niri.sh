@@ -31,7 +31,7 @@ pacman_pkgs=(
     pavucontrol cava wireplumber
 
     # ── Window Manager ──────────────────────────────────
-    niri niri-float-sticky fuzzel mako
+    niri fuzzel mako
     swayidle hyprlock swaylock-effects
     xdg-desktop-portal xdg-desktop-portal-gnome xorg-xwayland
     awww hyprpicker
