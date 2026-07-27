@@ -3,5 +3,5 @@
 # ║           Scripts-chan Metadata                       ║
 # ╚═══════════════════════════════════════════════════════╝
 
-VERSION="1.0"
+VERSION="1.1"
 AUTHOR="shorin & Miyu"

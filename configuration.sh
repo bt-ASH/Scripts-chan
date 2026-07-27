@@ -25,7 +25,6 @@ declare -A MODULES=(
     [6]="modules/desktop-plasma.sh"
     [7]="home/ash.sh"
     [8]="home/rebootloader.sh"
-    [9]="home/shorin-niri-setup.sh"
 )
 
 # ── Menu ────────────────────────────────────────────────
@@ -48,7 +47,6 @@ show_menu() {
     echo -e "  ${CGRN}6)${CDEF}  modules/desktop-plasma.sh"
     echo -e "  ${CGRN}7)${CDEF}  home/ash.sh"
     echo -e "  ${CGRN}8)${CDEF}  home/rebootloader.sh"
-    echo -e "  ${CGRN}9)${CDEF}  home/shorin-niri-setup.sh"
     echo -e "  ───────────────────────────────────────────────────"
     echo -e "  ${CRED}q)${CDEF}  Quit"
     echo ""
@@ -60,7 +58,7 @@ while true; do
     read -rp "  Select > " choice
 
     case $choice in
-        [1-9])
+        [1-8])
             target="${SCRIPT_DIR}/${MODULES[$choice]}"
             echo ""
             if [[ -x "$target" ]]; then

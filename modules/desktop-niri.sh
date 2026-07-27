@@ -5,7 +5,12 @@ set -euo pipefail
 
 CRED='\033[0;31m'
 CGRN='\033[0;32m'
+CYLW='\033[0;33m'
 CDEF='\033[0m'
+
+# ── Ensure sudo ─────────────────────────────────────────
+sudo -v || { echo -e "${CRED}>> sudo failed${CDEF}"; exit 1; }
+(sudo -n true; while kill -0 "$$" 2>/dev/null; do sudo -n true >/dev/null 2>&1; sleep 60; done) 2>/dev/null &
 
 # ── Pacman packages ─────────────────────────────────────
 pacman_pkgs=(
@@ -108,7 +113,18 @@ flatpak_pkgs=(
     com.google.Chrome
 )
 
+# ── Remove conflicting fuzzel ──────────────────────────
+echo -e "${CGRN}>> Removing conflicting fuzzel...${CDEF}"
+echo "  ───────────────────────────────────────────────────"
+if pacman -Q fuzzel 2>/dev/null; then
+    echo -e "${CYLW}  fuzzel detected, removing...${CDEF}"
+    sudo pacman -Rdd --noconfirm fuzzel 2>&1 && echo -e "${CGRN}  fuzzel removed${CDEF}" || echo -e "${CYLW}  fuzzel removal skipped, continuing...${CDEF}"
+else
+    echo -e "${CGRN}  fuzzel not installed, skipping${CDEF}"
+fi
+
 # ── Install ─────────────────────────────────────────────
+echo ""
 echo -e "${CGRN}>> Installing pacman packages...${CDEF}"
 echo "  ───────────────────────────────────────────────────"
 sudo pacman -S --noconfirm "${pacman_pkgs[@]}"
@@ -137,4 +153,12 @@ sudo systemctl enable --now vmware-networks-configuration.service
 sudo modprobe vmmon vmnet
 
 echo ""
-echo -e "${CGRN}>> Done.${CDEF}"
+echo -e "${CGRN}>> Setup complete!${CDEF}"
+echo "  ───────────────────────────────────────────────────"
+echo -e "  ${CYLW}1.${CDEF} Restart niri session or reboot"
+echo -e "     (or run: niri-session)"
+echo ""
+echo -e "  ${CYLW}2.${CDEF} Test wallpaper color generation:"
+echo -e "     Super+F10 for random wallpaper + color"
+echo -e "     matugen-update    update colors"
+echo -e "     matugen-select-type   pick style"
