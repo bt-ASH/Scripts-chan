@@ -7,13 +7,14 @@ CRED='\033[0;31m'
 CGRN='\033[0;32m'
 CDEF='\033[0m'
 
-# ── Pacman packages ─────────────────────────────────────
-pacman_pkgs=(
+# ── paru packages ─────────────────────────────────────
+paru_pkgs=(
     firefox firefox-dark-reader firefox-tridactyl firefox-ublock-origin
     musicfox
     steam
     qemu-full virt-manager swtpm
     obsidian
+    burpsuite nmap sqlmap gobuster dirsearch whatweb metasploit ffuf-bin nuclei-bin
 )
 
 # ── Flatpak packages ────────────────────────────────────
@@ -24,9 +25,9 @@ flatpak_pkgs=(
     com.wps.Office
 )
 
-echo -e "${CGRN}>> Installing pacman packages...${CDEF}"
+echo -e "${CGRN}>> Installing paru packages...${CDEF}"
 echo "  ───────────────────────────────────────────────────"
-sudo pacman -S --noconfirm "${pacman_pkgs[@]}"
+sudo paru -S --noconfirm "${paru_pkgs[@]}"
 
 echo ""
 echo -e "${CGRN}>> Installing flatpak packages...${CDEF}"

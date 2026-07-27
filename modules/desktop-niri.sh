@@ -103,7 +103,6 @@ aur_pkgs=(
 
     # ── Apps ────────────────────────────────────────────
     vmware-workstation firefox 
-    burpsuite nmap sqlmap gobuster dirsearch whatweb metasploit ffuf-bin nuclei-bin
 )
 
 # ── Flatpak packages ────────────────────────────────────
