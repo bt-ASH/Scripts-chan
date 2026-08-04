@@ -96,7 +96,7 @@ aur_pkgs=(
     clipse-wayland-bin scrcpy
 
     # ── Themes ──────────────────────────────────────────
-    catppuccin-fcitx5 catppuccin-gtk-theme-mocha
+    catppuccin-fcitx5 catppuccin-gtk-theme-mocha rime-opencc-emoji-symbols
 
     # ── Fonts ───────────────────────────────────────────
     ttf-maplemono-nf-cn-unhinted meowsans-ttf
