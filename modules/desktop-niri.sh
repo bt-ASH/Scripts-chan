@@ -41,7 +41,7 @@ pacman_pkgs=(
     xwayland-satellite
 
     # ── System ──────────────────────────────────────────
-    git wget btrfs-progs
+    git wget zram-generator
     nvtop htop wiremix s-tui
     tree brightnessctl
     bluez bluez-utils blueman
@@ -67,7 +67,7 @@ pacman_pkgs=(
 
     # ── Input Method ────────────────────────────────────
     fcitx5 fcitx5-gtk fcitx5-qt fcitx5-configtool
-    fcitx5-bamboo fcitx5-rime rime-ice-pinyin
+    fcitx5-bamboo fcitx5-rime rime-ice-pinyin rime-opencc-emoji-symbols 
 
     # ── Fonts ───────────────────────────────────────────
     ttf-maplemono ttf-maplemono-nf-unhinted
@@ -96,7 +96,7 @@ aur_pkgs=(
     clipse-wayland-bin scrcpy
 
     # ── Themes ──────────────────────────────────────────
-    catppuccin-fcitx5 catppuccin-gtk-theme-mocha rime-opencc-emoji-symbols
+    catppuccin-fcitx5 catppuccin-gtk-theme-mocha 
 
     # ── Fonts ───────────────────────────────────────────
     ttf-maplemono-nf-cn-unhinted meowsans-ttf

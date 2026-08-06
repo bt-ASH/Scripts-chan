@@ -8,7 +8,7 @@ CGRN='\033[0;32m'
 CDEF='\033[0m'
 
 linux_pkg=(
-    bash linux-lts-headers linux-lts linux-firmware
+    bash linux-lts-headers linux-lts linux-firmware btrfs-progs
 )
 
 echo -e "${CGRN}>> Installing base & linux kernel packages...${CDEF}"
