@@ -15,6 +15,7 @@ paru_pkgs=(
     qemu-full virt-manager swtpm
     obsidian
     burpsuite nmap sqlmap gobuster dirsearch whatweb metasploit ffuf-bin nuclei-bin
+    subfinder-bin httpx-bin
 )
 
 # ── Flatpak packages ────────────────────────────────────

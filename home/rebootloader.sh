@@ -10,10 +10,10 @@ CDEF='\033[0m'
 echo -e "${CGRN}>> Reinstalling GRUB...${CDEF}"
 echo "  ───────────────────────────────────────────────────"
 
-sudo grub-install \
-    --target=x86_64-efi \
-    --efi-directory=/boot \
-    --bootloader-id=Archlinux
+# sudo grub-install \
+#    --target=x86_64-efi \
+#    --efi-directory=/boot \
+#    --bootloader-id=Archlinux
 
 echo -e "${CGRN}>> Generating grub config...${CDEF}"
 sudo grub-mkconfig -o /boot/grub/grub.cfg
